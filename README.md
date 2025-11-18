@@ -71,7 +71,7 @@ See params.txt to setup and modify simulation parameters. (e.g. "tmax" sets simu
           current=current + stim_stren;
         }
   ```
-3. Specific identities of target cells to be stimulated within a layer can be provided in an external file (e.g. c1half_rand.csv). The file should be a single column of 1 or 0 zero values, one for each cell in the target layer. Only cell indices with a 1 will receive input current. The file is provided as an input in Makefile "run".
+3. Specific identities of target cells to be stimulated within a layer can be provided in an external file (e.g. c1half_rand.csv). The file should be a single column of 1 or 0 zero values, one for each cell in the target layer. Only cell indices with a 1 will receive input current. The file is provided as the last input in Makefile "run".
 
 
 ## Documentation
