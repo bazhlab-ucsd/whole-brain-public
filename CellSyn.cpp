@@ -684,15 +684,15 @@ void CellSyn::calc(double x, double *y_ini, double *f_ini, int step){
 
   
  // STIMULATION
-  int period=5000; // pulse every how many seconds
+  int period=5000; // pulse every how many miliseconds
   double stime=fmod(x,period);
   
 
   if (stim_on == 1){
     if(x>=stim_start&&x<stim_stop){
       // 500 ms pulses @ start of each second
-      //if ((stime>=0)&&(stime<500)){ 
-        // Stim all of clust 1
+      if ((stime>=0)&&(stime<500)){ // set duration of pulses
+        // Uncomment the relevant line for targetting different layers
         if (this->type == E_CX && stim_ids[this->m]==1){ // && (rand01() <= .8)){  //E_L2
           current=current + stim_stren;
         }
